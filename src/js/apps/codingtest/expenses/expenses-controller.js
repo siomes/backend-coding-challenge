@@ -27,7 +27,7 @@ app.controller("ctrlExpenses", ["$rootScope", "$scope", "config", "restalchemy",
 	var loadExpenses = function() {
 		// Retrieve a list of expenses via REST
 		restExpenses.get().then(function(expenses) {
-			$scope.expenses = expenses;
+			$scope.expenses = expenses.items;
 		});
 	}
 
